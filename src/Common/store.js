@@ -16,16 +16,16 @@ const persistConfig = {
     ],
 };
 
-const reducers = combineReducers({
+// const reducers = combineReducers({
     // account: accountSlice.reducer,
-});
+// });
 
-const persistedReducer = persistReducer(persistConfig, reducers);
+// const persistedReducer = persistReducer(persistConfig, reducers);
 
-export const store = configureStore({
-    reducer: persistedReducer,
-    middleware: getDefaultMiddleware({
-        immutableCheck: false,
-        serializableCheck: false,
-    }),
-});
+// export const store = configureStore({
+//     reducer: persistedReducer,
+//     middleware: getDefaultMiddleware({
+//         immutableCheck: false,
+//         serializableCheck: false,
+//     }),
+// });

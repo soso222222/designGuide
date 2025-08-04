@@ -48,6 +48,7 @@ const  MenuItem = forwardRef(({
                         <MenuSubItem 
                         key={idx} 
                         {...item}
+                        url={url + item.url}
                         gap={gap}
                         size={size}
                         menuState={menuState} />

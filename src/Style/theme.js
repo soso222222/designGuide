@@ -82,6 +82,7 @@ const colors = {
   H_Bg03: "rgba(223, 232, 241, 0.3)", // hover background
   C_Bg10: "rgba(245 ,245 ,245, 1)", //container background
   Bg10: "rgba(249, 249, 249, 1)",
+  L_Bg10: "rgba(250, 252, 254, 1)", // Labout background
   Border10: "rgba(223, 232, 241, 1)",
 };
 
@@ -333,74 +334,79 @@ const input = {
   },
 };
 const button = {
-    size: {
-        xxxs: {
-            height: "24rem",
-            fontSize: "10rem",
-            padding: "0 4rem",
-        },
-        xxs: {
-            height: "28rem",
-            fontSize: "12rem",
-            padding: "0 8rem",
-        },
-        xs: {
-            height: "32rem",
-            fontSize: "14rem",
-            padding: "0 12rem",
-        },
-        sm: {
-            height: "36rem",
-            fontSize: "14rem",
-            padding: "0 16rem",
-        },
-        md: {
-            height: "40rem",
-            fontSize: "14rem",
-            padding: "0 20rem",
-        },
-        lg: {
-            height: "44rem",
-            fontSize: "14rem",
-            padding: "0 20rem",
-        },
-        xl: {
-            height: "48rem",
-            fontSize: "14rem",
-            padding: "0 24rem",
-        },
-        xxl: {
-            height: "52rem",
-            fontSize: "14rem",
-            padding: "0 28rem",
-        },
-        xxxl: {
-            height: "56rem",
-            fontSize: "16rem",
-            padding: "0 32rem",
-        },
+  size: {
+    xxxxs: {
+      height: "20rem",
+      fontSize: "8rem",
+      padding: "0 2rem",
     },
-    theme: {
-        normal: {
-            color: colors.White,
-            background: colors.P_500,
-            fill: colors.White,
-            hover: {
-                background: colors.P_600,
-            },
-            active: {
-                background: colors.P_800,
-            },
-            focus: {
-                background: colors.P_700,
-            },
-            disabled: {
-                color: colors.G_150,
-                background: colors.G_50,
-                fill: colors.G_100,
-            },
-        },
+    xxxs: {
+      height: "24rem",
+      fontSize: "10rem",
+      padding: "0 4rem",
     },
+    xxs: {
+      height: "28rem",
+      fontSize: "12rem",
+      padding: "0 8rem",
+    },
+    xs: {
+      height: "32rem",
+      fontSize: "14rem",
+      padding: "0 12rem",
+    },
+    sm: {
+      height: "36rem",
+      fontSize: "14rem",
+      padding: "0 16rem",
+    },
+    md: {
+      height: "40rem",
+      fontSize: "14rem",
+      padding: "0 20rem",
+    },
+    lg: {
+      height: "44rem",
+      fontSize: "14rem",
+      padding: "0 20rem",
+    },
+    xl: {
+      height: "48rem",
+      fontSize: "14rem",
+      padding: "0 24rem",
+    },
+    xxl: {
+      height: "52rem",
+      fontSize: "14rem",
+      padding: "0 28rem",
+    },
+    xxxl: {
+      height: "56rem",
+      fontSize: "16rem",
+      padding: "0 32rem",
+    },
+  },
+  theme: {
+    normal: {
+      color: colors.White,
+      background: colors.P_500,
+      fill: colors.White,
+      hover: {
+        background: colors.P_600,
+      },
+      active: {
+        background: colors.P_800,
+      },
+      focus: {
+        background: colors.P_700,
+      },
+      disabled: {
+        color: colors.G_150,
+        background: colors.G_50,
+        fill: colors.G_100,
+      },
+    },
+  },
 };
 const theme = {
     icon,

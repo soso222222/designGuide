@@ -4,7 +4,7 @@
  */
 export const MenuComponent = {
     title: "Component",
-    url: "/Component",
+    url: "/component",
     isHidden: false,
     iconType: "cube", 
             isActive: false,

@@ -2,11 +2,28 @@ import { TopItem, TopleftItem, ToprightItem, Mode, ModeItem, Title, User, Wrappe
 import { IconButton } from "../../../../../Common";
 
 function TopMenu() {
+    
+    const onClick = (e) => {
+        const classList = document.querySelector(".main-wrapper").classList;
+
+        if(classList.contains("zoom"))
+            classList.remove("zoom");
+        else
+            classList.add("zoom");
+    };
+
     return (
         <Wrapper className="top">
             <TopItem>
                 <TopleftItem>
-                    <IconButton type="menu" isBorder={false} fill={"var(--Orange08)"}>메뉴 열기/닫기</IconButton>
+                    <IconButton 
+                    type="arrowLeftUpDown" 
+                    size="xxxxs" 
+                    isBorder={false} 
+                    fill={"var(--Orange08)"}
+                    onClick={(e) => onClick(e)}>
+                    메뉴 열기/닫기
+                    </IconButton>
                 </TopleftItem>
                 <ToprightItem>
                     <Mode>

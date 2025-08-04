@@ -59,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
     --H_Bg05:${(props) => props.theme.colors.H_Bg05};
     --H_Bg03:${(props) => props.theme.colors.H_Bg03};
     --C_Bg10:${(props) => props.theme.colors.C_Bg10};
+    --L_Bg10:${(props) => props.theme.colors.L_Bg10};
     --Bg10:${(props) => props.theme.colors.Bg10};
     --Border10:${(props) => props.theme.colors.Border10};
 

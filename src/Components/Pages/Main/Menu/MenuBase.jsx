@@ -1,3 +1,4 @@
+import LayoutContent from "../../Layout/LayoutContent";
 
 /**
  * Base
@@ -16,6 +17,13 @@ export const MenuBase = {
             isHidden: false,
             isActive: false,
             // el: <RiskAssessmentDetail step={0} />,
+        },
+        {
+            title: "Layout",
+            url: "/layout",
+            isHidden: false,
+            isActive: false,
+            el: <LayoutContent />,
         },
         {
             title: "Typography",

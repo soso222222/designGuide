@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 export const TopWrapper = styled.header`
   ${({ theme: { elevation, colors } }) => {
     return css`
-      grid-column: 2/3;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
       height: 110rem;
       z-index: 10000;
       box-shadow: ${elevation["Elevation__002"]};
@@ -23,6 +24,7 @@ export const LeftWrapper = styled.section`
       //   box-shadow: ${elevation["Elevation__002"]};
       border-right: 1px solid ${colors.Border10};
       background-color: #fff;
+      overflow: hidden;
       transition: width 0.8s;
     `;
   }}

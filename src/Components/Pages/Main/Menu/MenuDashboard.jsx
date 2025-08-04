@@ -1,3 +1,4 @@
+import Dashboard from "../../Dashboard/Dashboard";
 
 /**
  * Dashboard
@@ -8,5 +9,5 @@ export const MenuDashboard = {
     isHidden: false,
     isActive: true,
     iconType: "computer", 
-    // el: <RiskAssessment />,
+    el: <Dashboard />,
 };
