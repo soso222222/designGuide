@@ -1,15 +1,7 @@
 import Menu from "../../../../../Common/UI/Menu/Menu";
-import { category } from "./data.LeftMenu";
 import { Nav, Logo, Photo, Wrapper } from "./styled.LeftMenu";
-import useMenu from "../../../../../Common/Hooks/useMenu";
-import { useEffect } from "react";
 
-function LeftMenu() {
-    const menuState = useMenu();
-    
-    useEffect(() => {
-        menuState?.setMenuData(category);
-    }, [menuState?.menuData]);
+function LeftMenu({ menuState }) {
 
     return (
         <Wrapper>

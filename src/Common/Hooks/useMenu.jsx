@@ -1,11 +1,14 @@
 // import { useRef } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { onSetSeletedItem } from "../../features/menuSlice";
 
 function useMenu() {
-    const [selectedState, setSelectedState] = useState();
     const [state, setState] = useState({
         data: [], //메뉴 Data
     });
+    const dispatch = useDispatch();
+    const setSelectedItem = (name) => dispatch(onSetSeletedItem({title: name}));
     // const ref = useRef();
 
     const setMenuData = (data) =>
@@ -27,17 +30,6 @@ function useMenu() {
             // subMenuItem[i].classList.remove("click");
             subMenuItem[i].classList.remove("active");
         }
-    };
-
-    const setSelectedItem = (name) => {
-        setSelectedState(name);
-
-        const list = state.data.map((item, n) =>
-            item["title"] === name ? { ...item, isActive: true } : { ...item, isActive: false }
-        );
-        setState({
-            data: list,
-        });
     };
 
     const setUlHeight = (type, el) => {
@@ -78,6 +70,7 @@ function useMenu() {
         } else {
             setUlHeight("menu", selector);
         }
+        setSelectedItem(title);
         selector.classList.add("active");
 
 
@@ -88,7 +81,6 @@ function useMenu() {
         menuData: state.data,
         setMenuData,
         onClickMenu,
-        selectedItem: selectedState,
         setSelectedItem,
         // treeRef: ref,
     };

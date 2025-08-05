@@ -388,22 +388,41 @@ const button = {
   },
   theme: {
     normal: {
-      color: colors.White,
-      background: colors.P_500,
+      color: colors.Black08,
+      background: colors.White08,
       fill: colors.White,
       hover: {
-        background: colors.P_600,
+        background: colors.LogoBg10,
       },
       active: {
-        background: colors.P_800,
+        background: colors.Gray08,
       },
       focus: {
-        background: colors.P_700,
+        background: colors.LogoBg10,
       },
       disabled: {
-        color: colors.G_150,
-        background: colors.G_50,
-        fill: colors.G_100,
+        color: colors.White,
+        background: colors.Gray08,
+        fill: colors.Gray08,
+      },
+    },
+    red: {
+      color: colors.White,
+      background: colors.Red10,
+      fill: colors.White,
+      hover: {
+        background: colors.Red08,
+      },
+      active: {
+        background: colors.Red08,
+      },
+      focus: {
+        background: colors.Red08,
+      },
+      disabled: {
+        color: colors.White,
+        background: colors.Gray08,
+        fill: colors.Gray08,
       },
     },
   },

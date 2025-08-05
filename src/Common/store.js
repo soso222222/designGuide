@@ -1,26 +1,28 @@
 import {
-    combineReducers,
-    configureStore,
-    getDefaultMiddleware,
+  combineReducers,
+  configureStore,
 } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
+import menuSlice from "../features/menuSlice";
 // import accountSlice from "features/Account/accountSlice";
 
 const persistConfig = {
-    key: "root",
-    storage,
-    // whitelist: ["risk"],
-    blacklist: [
-        "account",
-    ],
+  key: "root",
+  storage,
+  whitelist: [
+    "menu"
+],
+  blacklist: [
+    // "menu",
+  ],
 };
 
-// const reducers = combineReducers({
-    // account: accountSlice.reducer,
-// });
+const reducers = combineReducers({
+    menu: menuSlice.reducer,
+});
 
-// const persistedReducer = persistReducer(persistConfig, reducers);
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 // export const store = configureStore({
 //     reducer: persistedReducer,
@@ -29,3 +31,13 @@ const persistConfig = {
 //         serializableCheck: false,
 //     }),
 // });
+
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      immutableCheck: false,
+      serializableCheck: false,
+    }),
+});

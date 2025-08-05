@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.button`
-  ${({ theme: { button, colors }, themeName = "normal", bg, size, width }) => {
+  ${({ theme: { button, colors }, themeName, bg, size, width }) => {
     const themeProps = button.theme[themeName];
+    const themePropHover = button.theme[themeName].hover;
     const themeBtn = button.size[size];
 
     return css`
@@ -12,11 +13,12 @@ export const Wrapper = styled.button`
       ${width && `width: ${width}rem;`}
       //   height: 35px;
       //   padding: 0 0.8em;
-      ${themeBtn}
       border: 1px solid ${colors.Border10};
-      border-radius: 4rem;
       background: transparent;
-      background-color: ${() => (bg ? bg : "transparent")};
+      ${themeProps}
+      ${themeBtn}
+      ${bg && `background-color: ${bg}`};
+      border-radius: 4rem;
       vertical-align: middle;
       text-align: center;
       cursor: pointer;
@@ -26,6 +28,10 @@ export const Wrapper = styled.button`
       transition: all 0.3s;
       appearance: none;
       -webkit-appearance: none;
+
+      &:hover {
+        ${themePropHover}
+      }
     `;
   }}
 `;

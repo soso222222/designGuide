@@ -1,7 +1,9 @@
 import { TopItem, TopleftItem, ToprightItem, Mode, ModeItem, Title, User, Wrapper, Photo } from "./styled.TopMenu";
 import { IconButton } from "../../../../../Common";
+import { useSelector } from "react-redux";
 
 function TopMenu() {
+    const { selectedState: {title} } = useSelector((state) => state.menu);
     
     const onClick = (e) => {
         const classList = document.querySelector(".main-wrapper").classList;
@@ -37,7 +39,7 @@ function TopMenu() {
                 </ToprightItem>
             </TopItem>
             <Title>
-                <h2>Dashboard</h2>
+                <h2>{title}</h2>
             </Title>
         </Wrapper>
     );

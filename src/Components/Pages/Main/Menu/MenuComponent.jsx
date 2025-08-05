@@ -1,3 +1,4 @@
+import ButtonContent from "../../Button/ButtonContent";
 
 /**
  * Component
@@ -15,7 +16,7 @@ export const MenuComponent = {
             url: "/button",
             isHidden: false,
             isActive: false,
-            // el: <RiskAssessmentDetail step={0} />,
+            el: <ButtonContent />,
         },
         {
             title: "Form",

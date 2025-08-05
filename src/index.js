@@ -5,10 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./Style/GlobalStyles";
 import App from "./App";
-import { store } from "./Stores/store";
+import { store } from "./Common/store"; 
 import theme from "./Style/theme";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
 
+let persistor = persistStore(store);
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,10 +19,12 @@ root.render(
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={theme}>
                 <Provider store={store}>
-                    <BrowserRouter>
-                        <GlobalStyles />
-                        <App />
-                    </BrowserRouter>
+                    <PersistGate loading={null} persistor={persistor}>
+                        <BrowserRouter>
+                            <GlobalStyles />
+                            <App />
+                        </BrowserRouter>
+                    </PersistGate>
                 </Provider>
             </ThemeProvider>
         </QueryClientProvider>

@@ -6,13 +6,14 @@ const Button = forwardRef(
     (
         {
             children,
-            themeName,
+            themeName = "normal",
             onClick,
             className,
             type,
             size = "xs",
             width,
             to,
+            bg,
         },
         ref
     ) => {
@@ -23,6 +24,7 @@ const Button = forwardRef(
             themeName={themeName}
             size={size}
             width={width}
+            bg={bg}
             onClick={(e) => {
                 to ? navigate(to) : onClick && onClick(e);
                 e.stopPropagation();

@@ -84,7 +84,6 @@ button,
 input,
 textarea {
     font-family: "Pretendard Regular", "sans-serif";
-    color: var(--Text07);
 }
 
 html {
@@ -95,6 +94,7 @@ html {
 body {
   margin: 0;
   font-size: 16rem;
+  color: var(--Text07);
 }
 h1,
 h2,
